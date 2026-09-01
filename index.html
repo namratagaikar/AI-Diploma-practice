@@ -1,9 +1,365 @@
 <!DOCTYPE html>
-<html>
-    <title>AI Diploma practice</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Learning Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #111827;
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #dbeafe;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+            color: white;
+        }
+
+        /* Section */
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .section-intro {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        /* Course Cards */
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        /* Features */
+        .features {
+            background: #e0f2fe;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .feature {
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            color: #0369a1;
+            margin-bottom: 10px;
+        }
+
+        /* About */
+        .about {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about p {
+            color: #475569;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #38bdf8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome Namrata!</h1>
-    <p>My First GitHub project</p>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🤖 AI Learning Hub</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Learn the Future with <span>AI</span></h1>
+
+            <p>
+                Explore Artificial Intelligence, Machine Learning,
+                Deep Learning, and Generative AI through our learning hub.
+            </p>
+
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section" id="courses">
+        <h2>Popular AI Courses</h2>
+
+        <p class="section-intro">
+            Start your AI journey with our beginner-friendly courses.
+        </p>
+
+        <div class="courses">
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Learn the fundamentals of AI, intelligent systems,
+                    problem solving, and AI applications.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Machine Learning</h3>
+                <p>
+                    Understand supervised learning, unsupervised learning,
+                    algorithms, and real-world ML projects.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔬</div>
+                <h3>Deep Learning</h3>
+                <p>
+                    Discover neural networks, computer vision,
+                    natural language processing, and deep learning.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">✨</div>
+                <h3>Generative AI</h3>
+                <p>
+                    Learn about AI models, prompt engineering,
+                    AI tools, and modern generative applications.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features" id="features">
+
+        <h2>Why Choose AI Learning Hub?</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <h3>📚 Easy Learning</h3>
+                <p>
+                    Simple explanations designed for students and beginners.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>💻 Practical Projects</h3>
+                <p>
+                    Learn AI concepts by building practical projects.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🎯 Skill Development</h3>
+                <p>
+                    Develop skills that can help you prepare for future careers.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🌐 Learn Anywhere</h3>
+                <p>
+                    Access your learning resources anytime and anywhere.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="about">
+
+            <h2>About AI Learning Hub</h2>
+
+            <p>
+                AI Learning Hub is a web-based educational platform created
+                to help students understand Artificial Intelligence and
+                modern technologies. Our goal is to make AI education
+                simple, practical, and accessible to everyone.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 <span>AI Learning Hub</span> |
+            Learn • Build • Innovate
+        </p>
+    </footer>
+
 </body>
 </html>
