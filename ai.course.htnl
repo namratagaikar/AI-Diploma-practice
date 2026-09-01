@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Learning Hub | Learn the Future with AI</title>
+
+    <meta
+        name="description"
+        content="AI Learning Hub - Learn Artificial Intelligence, Machine Learning, Deep Learning and the technologies shaping the future."
+    >
+
+    <style>
+        /* =========================
+           RESET & GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #172033;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+        ========================== */
+
+        header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #e8ebf2;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #5b4bdb;
+        }
+
+        .logo span {
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #4b5563;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #5b4bdb;
+        }
+
+        .nav-btn {
+            background: #5b4bdb;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+        .nav-btn:hover {
+            background: #4738c4;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 85% 25%, rgba(111, 92, 231, 0.18), transparent 28%),
+                radial-gradient(circle at 10% 80%, rgba(67, 160, 255, 0.12), transparent 30%),
+                #f7f8ff;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #ebe9ff;
+            color: #5b4bdb;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 1.08;
+            margin-bottom: 22px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #5b4bdb;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 32px;
+            color: #667085;
+            font-size: 1.1rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 9px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #5b4bdb;
+            color: white;
+            box-shadow: 0 8px 20px rgba(91, 75, 219, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #4738c4;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #344054;
+            border: 1px solid #d8dce8;
+        }
+
+        .btn-secondary:hover {
+            border-color: #5b4bdb;
+            color: #5b4bdb;
+        }
+
+        /* =========================
+           SECTION COMMON STYLES
+        ========================== */
+
+        section {
+            padding: 90px 0;
+            scroll-margin-top: 72px;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading .label {
+            color: #5b4bdb;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: #111827;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: #667085;
+        }
+
+        /* =========================
+           COURSES SECTION
+        ========================== */
+
+        .courses {
+            background: #ffffff;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border: 1px solid #e8eaf0;
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(20, 20, 50, 0.04);
+        }
+
+        .course-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 35px rgba(20, 20, 50, 0.1);
+            border-color: #d9d4ff;
+        }
+
+        .course-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: #eeecff;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+        }
+
+        .course-card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+            font-size: 1.3rem;
+        }
+
+        .course-card p {
+            color: #667085;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 17px;
+            border-top: 1px solid #eef0f4;
+            color: #667085;
+            font-size: 0.85rem;
+        }
+
+        .course-link {
+            color: #5b4bdb;
+            font-weight: 700;
+        }
+
+        /* =========================
+           FEATURES SECTION
+        ========================== */
+
+        .features {
+            background: #f7f8fc;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            text-align: center;
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            border: 1px solid #eaecf0;
+        }
+
+        .feature-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #ebe9ff;
+            color: #5b4bdb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .feature-card p {
+            color: #667085;
+            font-size: 0.95rem;
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content .label {
+            color: #5b4bdb;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .about-content p {
+            color: #667085;
+            margin-bottom: 18px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            margin-bottom: 13px;
+            color: #344054;
+            font-weight: 600;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #5b4bdb;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .about-visual {
+            min-height: 370px;
+            border-radius: 25px;
+            background:
+                linear-gradient(135deg, rgba(91, 75, 219, 0.95), rgba(60, 139, 230, 0.95)),
+                #5b4bdb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-visual::before,
+        .about-visual::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .about-visual::before {
+            width: 280px;
+            height: 280px;
+        }
+
+        .about-visual::after {
+            width: 430px;
+            height: 430px;
+        }
+
+        .ai-symbol {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .ai-symbol strong {
+            display: block;
+            font-size: 5rem;
+            line-height: 1;
+        }
+
+        .ai-symbol span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           CTA SECTION
+        ========================== */
+
+        .cta {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #c4cad6;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #0b1120;
+            color: #aeb6c5;
+            padding: 55px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            max-width: 330px;
+            font-size: 0.9rem;
+        }
+
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 9px;
+        }
+
+        .footer-column a {
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #20293a;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+            .course-grid,
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-visual {
+                min-height: 300px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .nav-btn {
+                padding: 7px 12px;
+            }
+
+            .hero {
+                min-height: 570px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .course-grid,
+            .feature-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .footer-grid {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                AI<span>Learning</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses" class="nav-btn">Get Started</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="hero" id="home">
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        🚀 Build Skills for Tomorrow
+                    </div>
+
+                    <h1>
+                        Learn the <span>Future</span> with AI
+                    </h1>
+
+                    <p>
+                        Master Artificial Intelligence, Machine Learning,
+                        Deep Learning and the technologies transforming
+                        the world — all in one learning hub.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <!-- Connected to Courses Section -->
+                        <a href="#courses" class="btn btn-primary">
+                            Explore Courses →
+                        </a>
+
+                        <a href="#about" class="btn btn-secondary">
+                            Learn More
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             POPULAR COURSES
+        ========================== -->
+
+        <section class="courses" id="courses">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="label">Learn & Grow</div>
+
+                    <h2>Popular AI Courses</h2>
+
+                    <p>
+                        Start your AI journey with practical,
+                        beginner-friendly courses designed to build
+                        real-world skills.
+                    </p>
+                </div>
+
+
+                <div class="course-grid">
+
+                    <!-- Course 1 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">🤖</div>
+
+                        <h3>Artificial Intelligence</h3>
+
+                        <p>
+                            Understand the fundamentals of AI,
+                            intelligent systems, problem solving,
+                            neural networks and modern AI applications.
+                        </p>
+
+                        <div class="course-info">
+                            <span>12 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 2 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">🧠</div>
+
+                        <h3>Machine Learning</h3>
+
+                        <p>
+                            Learn supervised and unsupervised learning,
+                            model training, evaluation and how to build
+                            intelligent predictive systems.
+                        </p>
+
+                        <div class="course-info">
+                            <span>15 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 3 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">🔬</div>
+
+                        <h3>Deep Learning</h3>
+
+                        <p>
+                            Explore neural networks, computer vision,
+                            natural language processing and modern
+                            deep learning techniques.
+                        </p>
+
+                        <div class="course-info">
+                            <span>18 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 4 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">💬</div>
+
+                        <h3>Generative AI</h3>
+
+                        <p>
+                            Discover how modern generative AI systems
+                            create text, images, code and other forms
+                            of content.
+                        </p>
+
+                        <div class="course-info">
+                            <span>10 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 5 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">👁️</div>
+
+                        <h3>Computer Vision</h3>
+
+                        <p>
+                            Learn how machines understand images and
+                            video using image processing and AI-based
+                            computer vision techniques.
+                        </p>
+
+                        <div class="course-info">
+                            <span>14 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Course 6 -->
+                    <article class="course-card">
+
+                        <div class="course-icon">🗣️</div>
+
+                        <h3>Natural Language Processing</h3>
+
+                        <p>
+                            Learn how AI understands and generates
+                            human language through NLP, language models
+                            and practical applications.
+                        </p>
+
+                        <div class="course-info">
+                            <span>13 Lessons</span>
+                            <a href="#" class="course-link">View Course →</a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section class="features" id="features">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="label">Why Choose Us</div>
+
+                    <h2>Everything You Need to Learn AI</h2>
+
+                    <p>
+                        Learn at your own pace with resources designed
+                        to turn complex AI concepts into practical skills.
+                    </p>
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+
+                        <h3>Expert Courses</h3>
+
+                        <p>
+                            Learn from carefully structured courses
+                            covering essential AI concepts and tools.
+                        </p>
+                    </div>
+
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+
+                        <h3>Practical Learning</h3>
+
+                        <p>
+                            Build your understanding through projects,
+                            examples and hands-on learning experiences.
+                        </p>
+                    </div>
+
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+
+                        <h3>Learn at Your Pace</h3>
+
+                        <p>
+                            Study whenever you want and progress through
+                            lessons at a pace that works for you.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-content">
+
+                        <div class="label">About AI Learning Hub</div>
+
+                        <h2>
+                            Your Gateway to the World of Artificial Intelligence
+                        </h2>
+
+                        <p>
+                            AI Learning Hub is designed to make artificial
+                            intelligence easier to understand and more
+                            accessible to everyone.
+                        </p>
+
+                        <p>
+                            Whether you are just starting your AI journey
+                            or looking to expand your technical skills,
+                            our learning resources help you understand
+                            today's most important AI technologies.
+                        </p>
+
+                        <ul class="about-list">
+                            <li>Beginner-friendly learning paths</li>
+                            <li>Practical AI concepts and projects</li>
+                            <li>Modern and industry-relevant topics</li>
+                            <li>Learn anytime, anywhere</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="about-visual">
+
+                        <div class="ai-symbol">
+                            <strong>AI</strong>
+                            <span>LEARN • BUILD • INNOVATE</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CALL TO ACTION
+        ========================== -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <h2>Ready to Start Your AI Journey?</h2>
+
+                <p>
+                    Explore our courses and start building the skills
+                    you need for the future of technology.
+                </p>
+
+                <a href="#courses" class="btn btn-primary">
+                    Explore Courses →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+                        AI<span>Learning</span>
+                    </a>
+
+                    <p>
+                        Empowering learners with the knowledge and skills
+                        to understand and build the future with AI.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <ul>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Courses</h4>
+
+                    <ul>
+                        <li><a href="#courses">Artificial Intelligence</a></li>
+                        <li><a href="#courses">Machine Learning</a></li>
+                        <li><a href="#courses">Deep Learning</a></li>
+                        <li><a href="#courses">Generative AI</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Connect</h4>
+
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 AI Learning Hub. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
